@@ -7,7 +7,7 @@ LOGFILE="jack.clemen.advices"
 TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
 
 # Get advice using curl and parse with jq
-ADVICE=$(curl -s https://api.adviceslip.com/advice | jq -r '.slip.advices')
+ADVICE=$(curl -s https://api.adviceslip.com/advice | jq -r '.slip.advice')
 
 # Save to log file
 echo "[$TIMESTAMP] $ADVICE" >> "$LOGFILE"
